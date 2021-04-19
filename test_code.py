@@ -1,5 +1,3 @@
-keys = ("name", "age", "food")
-values = ("Monty", 42, "spam")
+from pathlib import Path
 
-new_dict = dict(zip(keys, values))
-print(new_dict)
+Path("father/child").mkdir(parents=True, exist_ok=True)

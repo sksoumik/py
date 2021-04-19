@@ -2,7 +2,7 @@ Maintained by SADMAN KABIR SOUMIK
 
 ---
 
-# dict(zip)
+# Combine two lists as a dictionary | dict(zip)
 
 
 
@@ -31,5 +31,13 @@ print(new_dict)
 ```bash
 # output
 {'name' : 'Monty', 'age' : 42, 'food' : 'spam'}
+```
+
+# Create nested directory in the current directory | pathlib
+
+```python
+from pathlib import Path
+
+Path("father/child").mkdir(parents=True, exist_ok=True)
 ```
 
