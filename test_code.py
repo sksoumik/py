@@ -1,3 +1,11 @@
-from pathlib import Path
+def reverse_text(text):
+    # base condition
+    if text == "":
+        return text
+    else:
+        return text[-1] + reverse_text(text[0:-1])
 
-Path("father/child").mkdir(parents=True, exist_ok=True)
+
+text = "abcd"
+rev = reverse_text(text)
+print(rev)
