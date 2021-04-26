@@ -86,3 +86,62 @@ def reverse_text(text):
     else:
         return text[-1] + reverse_text(text[0:-1])
 ```
+
+# append and extend in Python List
+
+Program
+
+```python
+x = [1, 2, 3]
+x.append([4, 5])
+print (x)
+```
+
+Output
+
+```bash
+[1, 2, 3, [4, 5]]
+```
+
+Program
+
+```python
+x = [1, 2, 3]
+x.extend([4, 5])
+print (x)
+```
+
+Output
+
+```bash
+[1, 2, 3, 4, 5]
+```
+
+Program
+
+```python
+my_list = ['Python', 'Java']
+my_list.append('Dart')
+print(my_list)
+```
+
+Output
+
+```bash
+['Python', 'Java', 'Dart']
+```
+
+Program
+
+```python
+my_list = ['python', 'java']
+another_list = [0, 1, 2, 3]
+my_list.extend(another_list)
+print(my_list)
+```
+
+Output
+
+```
+['python', 'java', 0, 1, 2, 3]
+```
