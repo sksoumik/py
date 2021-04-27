@@ -148,7 +148,7 @@ Output
 
 # Switch case in Python
 
-Unlike every other programming language we have used before, Python does not have a switch or case statement.To get around this fact, we use dictionary mapping.
+Unlike every other programming language, Python does not have a switch or case statement.To get around this fact, we use dictionary mapping.
 
 Program
 
