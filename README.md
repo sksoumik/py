@@ -274,7 +274,8 @@ class Entrepreneur(Person):
 Program
 
 ```python
-# Use the Entrepreneur class to create an object, and then execute the print_name method
+# Use the Entrepreneur class to create an object,
+#and then execute the print_name method
 
 
 sub_class_var = Entrepreneur("Elon", "Musk")
@@ -290,7 +291,8 @@ Elon Musk
 Program
 
 ```python
-# When we add the __init__() function, the subclass will no longer inherit the parent's/base's __init__() function
+# When we add the __init__() function, the subclass will
+# no longer inherit the parent's/base's __init__() function
 
 
 class Entrepreneur(Person):
@@ -299,7 +301,9 @@ class Entrepreneur(Person):
 ```
 
 ```python
-# we can add super() function that will make the child class inherit all the methods and properties from its parent + we can add it's own properties.
+# we can add super() function that will make the child class
+# inherit all the methods and properties from its parent +
+#we can add it's own properties.
 
 
 class Entrepreneur(Person):
