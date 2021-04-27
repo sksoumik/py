@@ -1,13 +1,6 @@
-def numbers_to_strings(argument):
-    switcher = {
-        0: "zero",
-        1: "one",
-        2: "two",
-    }
-    return switcher.get(argument, "Data not available")
+# we can add super() function that will make the child class inherit all the methods and properties from its parent.
 
 
-if __name__ == "__main__":
-
-    result = numbers_to_strings(4)
-    print(result)
+class Student(Person):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)

@@ -18,8 +18,8 @@ Output
 Program
 
 ```python
-keys = ('name', 'age', 'food')
-values = ('Monty', 42, 'spam')
+keys = ('name', 'age', 'location')
+values = ('Soumik', 26, 'Bangladesh')
 
 new_dict = dict(zip(keys, values))
 print(new_dict)
@@ -29,7 +29,7 @@ Output
 
 ```bash
 # output
-{'name' : 'Monty', 'age' : 42, 'food' : 'spam'}
+{'name' : 'Soumik', 'age' : 26, 'location' : 'Bangladesh'}
 ```
 
 # Create nested directory using pathlib
@@ -42,7 +42,7 @@ from pathlib import Path
 Path("father/child").mkdir(parents=True, exist_ok=True)
 ```
 
-# Slice texts using `:`
+# Slice Strings
 
 Program
 
@@ -235,6 +235,90 @@ You can then use this as a key in a dictionary to store notes on locations. A li
 `yield` is a keyword that is used like return, except the function will return a generator.
 
 Generators do not store all the values in memory, they generate the values on the fly.
+
+# Inheritance in Python
+
+Program
+
+```python
+# define the base class
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def print_name(self):
+        print(self.first_name, self.last_name)
+
+
+x = Person("Elon", "Musk")
+x.print_name()
+```
+
+Output
+
+```bash
+Elon Musk
+```
+
+Program
+
+```python
+# create a subclass (Entrepreneur) that extends base class(Person)
+
+class Entrepreneur(Person):
+    pass
+```
+
+Program
+
+```python
+# Use the Entrepreneur class to create an object, and then execute the print_name method
+
+
+sub_class_var = Entrepreneur("Elon", "Musk")
+sub_class_var.print_name()
+```
+
+Output
+
+```bash
+Elon Musk
+```
+
+Program
+
+```python
+# When we add the __init__() function, the subclass will no longer inherit the parent's/base's __init__() function
+
+
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+    # add properties
+```
+
+```python
+# we can add super() function that will make the child class inherit all the methods and properties from its parent + we can add it's own properties.
+
+
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+```
+
+Program
+
+```python
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+
+        # adding new properties in the subclass
+        self.company_name = "SpaceX"
+```
+
+# Polymorphism in Python
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
