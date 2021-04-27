@@ -1,7 +1,3 @@
-Maintained by SADMAN KABIR SOUMIK
-
----
-
 # Combine two lists as a dictionary | dict(zip)
 
 Program
@@ -197,3 +193,6 @@ Output
 ```bash
 Data not available
 ```
+
+================================================
+AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
