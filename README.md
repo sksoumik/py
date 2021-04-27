@@ -145,3 +145,55 @@ Output
 ```
 ['python', 'java', 0, 1, 2, 3]
 ```
+
+# Switch case in Python
+
+Unlike every other programming language we have used before, Python does not have a switch or case statement.To get around this fact, we use dictionary mapping.
+
+Program
+
+```python
+def numbers_to_strings(argument):
+    switcher = {
+        0: "zero",
+        1: "one",
+        2: "two",
+    }
+    return switcher.get(argument, "Data not available")
+
+
+if __name__ == "__main__":
+
+    result = numbers_to_strings(1)
+    print(result)
+```
+
+Output
+
+```bash
+one
+```
+
+Program
+
+```python
+def numbers_to_strings(argument):
+    switcher = {
+        0: "zero",
+        1: "one",
+        2: "two",
+    }
+    return switcher.get(argument, "Data not available")
+
+
+if __name__ == "__main__":
+
+    result = numbers_to_strings(4)
+    print(result)
+```
+
+Output
+
+```bash
+Data not available
+```
