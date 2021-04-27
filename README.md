@@ -194,5 +194,47 @@ Output
 Data not available
 ```
 
+# Read and Write File
+
+Program
+
+```python
+# read mode only, if the file does not exists, raises I/O error
+
+filename = open("new_file.txt", "a")
+```
+
+```python
+# The file is created if it does not exist. The handle is positioned at the end of the file. The data being written will be inserted at the end, after the existing data.
+
+filename = open("filename.txt", "a")
+```
+
+# List vs Tuple, when to use what
+
+Tuples are fixed size in nature whereas lists are dynamic.
+In other words, a tuple is immutable whereas a list is mutable.
+
+1. You can't add elements to a tuple. Tuples have no append or extend method.
+2. You can't remove elements from a tuple. Tuples have no remove or pop method.
+
+Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences. Tuples have structure, lists have order.
+
+Using this distinction makes code more explicit and understandable.
+
+One example would be pairs of page and line number to reference locations in a book, e.g.:
+
+```bash
+my_location = (42, 11)  # page number, line number
+```
+
+You can then use this as a key in a dictionary to store notes on locations. A list on the other hand could be used to store multiple locations.
+
+# yield keyword
+
+`yield` is a keyword that is used like return, except the function will return a generator.
+
+Generators do not store all the values in memory, they generate the values on the fly.
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
