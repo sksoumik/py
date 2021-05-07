@@ -374,5 +374,19 @@ Output
 [(31, 40, 13), (17, 51, 12)]
 ```
 
+# Check the memory usage
+
+Program
+
+```python
+import sys
+
+a, b, c, d = "abcde", "xy", 2, 15.06
+print(sys.getsizeof(a))
+print(sys.getsizeof(b))
+print(sys.getsizeof(c))
+print(sys.getsizeof(d))
+```
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
