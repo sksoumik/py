@@ -324,5 +324,55 @@ class Entrepreneur(Person):
 
 # Polymorphism in Python
 
+```python
+# TODO
+```
+
+# Reverse a list
+
+program
+
+```python
+language = ["Python", "Java", "Dart"]
+language.reverse()
+print(language)
+```
+
+Output
+
+```bash
+['Dart', 'Java', 'Python']
+```
+
+# Using generators inside functions
+
+Program
+
+```python
+x = sum(i for i in range(10))
+print(x)
+```
+
+Output
+
+```bash
+45
+```
+
+# Transpose a matrix
+
+Program
+
+```python
+x = [[31, 17], [40, 51], [13, 12]]
+print(list(zip(*x)))
+```
+
+Output
+
+```bash
+[(31, 40, 13), (17, 51, 12)]
+```
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
