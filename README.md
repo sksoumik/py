@@ -388,5 +388,148 @@ print(sys.getsizeof(c))
 print(sys.getsizeof(d))
 ```
 
+# Check if a file exists
+
+Program
+
+```python
+import os.path
+
+if os.path.isfile(filepath):
+   print("File exists")
+```
+
+# Merge two dictionaries
+
+Program
+
+```python
+x = {'a': 1, 'b': 2}
+y = {'b': 3, 'c': 4}
+z = {**x, **y}
+print(z)
+```
+
+Output
+
+```bash
+{'a': 1, 'b': 3, 'c': 4}
+```
+
+# Make a flat list list out of lists of lists
+
+Program
+
+```python
+import itertools
+
+list_2d = [[1, 2, 3], [4, 5, 6], [7], [8, 9]]
+merged = list(itertools.chain(*list_2d))
+print(merged)
+```
+
+Output
+
+```bash
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Program
+
+```python
+# using list comprehension
+
+list_2d = [[1, 2, 3], [4, 5, 6], [7], [8, 9]]
+flat_list = [item for sublist in list_2d for item in sublist]
+print(flat_list)
+```
+
+Output
+
+```bash
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+# Slicing in array
+
+Program
+
+```python
+a[-1]    # last item in the array
+a[-2:]   # last two items in the array
+a[:-2]   # everything except the last two items
+
+a[::-1]    # all items in the array, reversed
+```
+
+# Find the index of an item in an array
+
+Program
+
+```python
+list = ["Tensorflow", "PyTorch", "Caffe"]
+idx_pytorch = list.index("PyTorch")
+print(idx_pytorch)
+```
+
+Output
+
+```bash
+1
+```
+
+# Iterating over dictionaries using 'for' loops
+
+Program
+
+```python
+d = {"x": 1, "y": 2, "z": 3}
+
+for key, value in d.items():
+    print(key, value)
+```
+
+Output
+
+```bash
+x 1
+y 2
+z 3
+```
+
+# Sort a dictionary by key
+
+Program
+
+```python
+d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+sort_by_key = {k: v for k, v in sorted(d.items(), key=lambda item: item[0])}
+print(sort_by_key)
+```
+
+Output
+
+```bash
+{0: 0, 1: 2, 2: 1, 3: 4, 4: 3}
+```
+
+# Sort dictionary by value
+
+Program
+
+```python
+d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+sort_by_value = {k: v for k, v in sorted(d.items(), key=lambda item: item[1])}
+print(sort_by_value)
+```
+
+Output
+
+```bash
+{0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
+```
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
