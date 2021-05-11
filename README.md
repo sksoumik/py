@@ -531,5 +531,18 @@ Output
 {0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
 ```
 
+# Rename all files of a folder
+
+```python
+import os
+
+os.getcwd()
+src_path = "./source_folder/"
+destination_path = "./destination_folder/"
+
+for i, filename in enumerate(os.listdir(src_path)):
+    os.rename(src_path + filename, destination_path + str(i) + ".jpg")
+```
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)

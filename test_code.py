@@ -1,6 +1,7 @@
-x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
-sort_d = {k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
-print(sort_d)
+import os
 
-sort_d = {k: v for k, v in sorted(x.items(), key=lambda item: item[0])}
-print(sort_d)
+os.getcwd()
+path = "./set 5/"
+destination_path = "./renamed/"
+for i, filename in enumerate(os.listdir(path)):
+    os.rename(path + filename, destination_path + "0" + str(i + 56) + ".jpg")
