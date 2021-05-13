@@ -210,124 +210,6 @@ filename = open("new_file.txt", "a")
 filename = open("filename.txt", "a")
 ```
 
-# List vs Tuple, when to use what
-
-Tuples are fixed size in nature whereas lists are dynamic.
-In other words, a tuple is immutable whereas a list is mutable.
-
-1. You can't add elements to a tuple. Tuples have no append or extend method.
-2. You can't remove elements from a tuple. Tuples have no remove or pop method.
-
-Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences. Tuples have structure, lists have order.
-
-Using this distinction makes code more explicit and understandable.
-
-One example would be pairs of page and line number to reference locations in a book, e.g.:
-
-```bash
-my_location = (42, 11)  # page number, line number
-```
-
-You can then use this as a key in a dictionary to store notes on locations. A list on the other hand could be used to store multiple locations.
-
-# yield keyword
-
-`yield` is a keyword that is used like return, except the function will return a generator.
-
-Generators do not store all the values in memory, they generate the values on the fly.
-
-# Inheritance in Python
-
-Program
-
-```python
-# define the base class
-
-class Person:
-    def __init__(self, first_name, last_name):
-        self.first_name = first_name
-        self.last_name = last_name
-
-    def print_name(self):
-        print(self.first_name, self.last_name)
-
-
-x = Person("Elon", "Musk")
-x.print_name()
-```
-
-Output
-
-```bash
-Elon Musk
-```
-
-Program
-
-```python
-# create a subclass (Entrepreneur) that extends base class(Person)
-
-class Entrepreneur(Person):
-    pass
-```
-
-Program
-
-```python
-# Use the Entrepreneur class to create an object,
-# and then execute the print_name method
-
-
-sub_class_var = Entrepreneur("Elon", "Musk")
-sub_class_var.print_name()
-```
-
-Output
-
-```bash
-Elon Musk
-```
-
-Program
-
-```python
-# When we add the __init__() function, the subclass will
-# no longer inherit the parent's/base's __init__() function
-
-
-class Entrepreneur(Person):
-    def __init__(self, first_name, last_name):
-    # add properties
-```
-
-```python
-# we can add super() function that will make the child class
-# inherit all the methods and properties from its parent +
-# we can add it's own properties.
-
-
-class Entrepreneur(Person):
-    def __init__(self, first_name, last_name):
-        super().__init__(first_name, last_name)
-```
-
-Program
-
-```python
-class Entrepreneur(Person):
-    def __init__(self, first_name, last_name):
-        super().__init__(first_name, last_name)
-
-        # adding new properties in the subclass
-        self.company_name = "SpaceX"
-```
-
-# Polymorphism in Python
-
-```python
-# TODO
-```
-
 # Reverse a list
 
 program
@@ -543,6 +425,159 @@ destination_path = "./destination_folder/"
 for i, filename in enumerate(os.listdir(src_path)):
     os.rename(src_path + filename, destination_path + str(i) + ".jpg")
 ```
+
+# Count distinct elements in a list
+
+Program
+
+```python
+from collections import Counter
+
+words = ["a", "b", "c", "a", "b", "a"]
+
+print(dict(Counter(words)))
+# {'a': 3, 'b': 2, 'c': 1}
+print(list(Counter(words).keys()))
+# ['a', 'b', 'c']
+print(list(Counter(words).values()))
+# [3, 2, 1]
+```
+
+# List vs Tuple, when to use what
+
+Tuples are fixed size in nature whereas lists are dynamic.
+In other words, a tuple is immutable whereas a list is mutable.
+
+1. You can't add elements to a tuple. Tuples have no append or extend method.
+2. You can't remove elements from a tuple. Tuples have no remove or pop method.
+
+Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences. Tuples have structure, lists have order.
+
+Using this distinction makes code more explicit and understandable.
+
+One example would be pairs of page and line number to reference locations in a book, e.g.:
+
+```bash
+my_location = (42, 11)  # page number, line number
+```
+
+You can then use this as a key in a dictionary to store notes on locations. A list on the other hand could be used to store multiple locations.
+
+# yield keyword
+
+`yield` is a keyword that is used like return, except the function will return a generator.
+
+Generators do not store all the values in memory, they generate the values on the fly.
+
+# Inheritance in Python
+
+Program
+
+```python
+# define the base class
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def print_name(self):
+        print(self.first_name, self.last_name)
+
+
+x = Person("Elon", "Musk")
+x.print_name()
+```
+
+Output
+
+```bash
+Elon Musk
+```
+
+Program
+
+```python
+# create a subclass (Entrepreneur) that extends base class(Person)
+
+class Entrepreneur(Person):
+    pass
+```
+
+Program
+
+```python
+# Use the Entrepreneur class to create an object,
+# and then execute the print_name method
+
+
+sub_class_var = Entrepreneur("Elon", "Musk")
+sub_class_var.print_name()
+```
+
+Output
+
+```bash
+Elon Musk
+```
+
+Program
+
+```python
+# When we add the __init__() function, the subclass will
+# no longer inherit the parent's/base's __init__() function
+
+
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+    # add properties
+```
+
+```python
+# we can add super() function that will make the child class
+# inherit all the methods and properties from its parent +
+# we can add it's own properties.
+
+
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+```
+
+Program
+
+```python
+class Entrepreneur(Person):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+
+        # adding new properties in the subclass
+        self.company_name = "SpaceX"
+```
+
+# Polymorphism in Python
+
+```python
+# TODO
+```
+
+# Static methods in python
+
+Program
+
+```python
+class MyClass:
+    @staticmethod
+    def the_static_method(x):
+        print(x)
+
+
+MyClass.the_static_method(2)  # outputs 2
+```
+
+Description
+
+We can have static method in Python using `@staticmethod` decorator. Like other static methods in other languages, we don't need to create class instance to call the static method. We can directly call the static method using the Class name. Static methods are usually used to create utility functions.
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
