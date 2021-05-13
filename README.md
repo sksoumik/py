@@ -443,6 +443,58 @@ print(list(Counter(words).values()))
 # [3, 2, 1]
 ```
 
+# Remove space and newlines from strings
+
+Program
+
+```python
+s = "   \n\r\n  \n  abc   def \n\r\n  \n  "
+remove_all = s.strip()
+remove_left = s.lstrip()
+remove_right = s.rstrip()
+
+print(remove_all) # 'abc   def'
+print(remove_left) # 'abc   def \n\r\n  \n  '
+print(remove_right) # '   \n\r\n  \n  abc   def'
+```
+
+# Limit floats to two decimal places
+
+Program
+
+```python
+a = 13.946
+print("%.2f" % a)
+```
+
+Output
+
+```bash
+13.95
+```
+
+Program
+
+```python
+x = 13.946
+print(round(x, 2))
+```
+
+Output
+
+```bash
+13.95
+```
+
+# Randomly select an item from an list.
+
+```python
+import random
+
+foo = ['a', 'b', 'c', 'd', 'e']
+print(random.choice(foo))
+```
+
 # List vs Tuple, when to use what
 
 Tuples are fixed size in nature whereas lists are dynamic.
