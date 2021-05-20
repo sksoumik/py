@@ -507,6 +507,96 @@ Output
 2
 ```
 
+# Collections Module
+
+###### Create a class using namedtuple
+
+Program
+
+```python
+from collections import namedtuple
+
+# create a Employee class
+Employee = namedtuple("Employee", ["name", "position", "level"])
+print(Employee)  # <class '__main__.Employee'>
+
+# assign names in the Employee class
+employee_1 = Employee("Mr. Smith", "Software Engineer", "junior")
+print(employee_1)
+# Employee(name='Mr. Smith', position='Software Engineer', level='junior')
+
+print(employee_1.position)  # Software Engineer
+print(dict(employee_1._asdict()))
+# {'name': 'Mr. Smith', 'position': 'Software Engineer', 'level': 'junior'}
+```
+
+###### Create dictionaries using defaultdict
+
+```python
+from collections import defaultdict
+
+employee_record = [
+    ("Kabir", "ML", "level-b"),
+    ("Sunehra", "SDE", "level-b"),
+    ("Smith", "ML", "level-c"),
+    ("William", "HR", "level-c"),
+]
+
+employee_name_by_dept = defaultdict(list)
+print(employee_name_by_dept)
+# defaultdict(<class 'list'>, {})
+
+for name, dept, level in employee_record:
+    employee_name_by_dept[dept].append(name) # dept as key, name as values
+
+print(dict(employee_name_by_dept))
+# {'ML': ['Kabir', 'Smith'], 'SDE': ['Sunehra'], 'HR': ['William']}
+```
+
+###### Inserting elements in a list
+
+Program
+
+```python
+employee_list = ["Soumik", "Jamie", "Smith"]
+
+# O(n) performance
+employee_list.insert(0, "Sunehra")
+print(employee_list)
+```
+
+Output
+
+```bash
+['Sunehra', 'Soumik', 'Jamie', 'Smith']
+```
+
+Program
+
+```python
+from collections import deque
+
+
+employee_list = ["Soumik", "Jamie", "Smith"]
+employee_list_deque = deque(employee_list)
+
+# O(1) time performance
+employee_list_deque.appendleft("Sunehra")
+print(list(employee_list_deque))
+```
+
+Output
+
+```bash
+['Sunehra', 'Soumik', 'Jamie', 'Smith']
+```
+
+Note
+
+Although `deque` adds entries to the beginning of a sequence more efficiently than a list, `deque` does not perform all of its operations more efficiently than a list. For example, accessing a random item in a `deque` has `O(n)` performance, but accessing a random item in a list has `O(1)` performance.
+
+Use `deque` when it is important to insert or remove elements from either side of your collection quickly.
+
 # Remove space and newlines from strings
 
 Program
