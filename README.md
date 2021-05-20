@@ -443,6 +443,70 @@ print(list(Counter(words).values()))
 # [3, 2, 1]
 ```
 
+# Most frequent element in a list
+
+Program
+
+```python
+from collections import Counter
+
+
+def most_frequent(lst):
+    data = Counter(lst)
+    return data.most_common(1)  # returns most frequent 1 element
+
+
+list = [2, 1, 2, 2, 1, 3, 3, 3, 2]
+print(most_frequent(list))
+```
+
+Output
+
+```bash
+[(2, 4)]  # means, 2 is the most frequent element which appears 4 times.
+```
+
+Program
+
+```python
+from collections import Counter
+
+
+def most_frequent(lst):
+    data = Counter(lst)
+    return data.most_common(2) # returns most frequent 2 elements
+
+
+list = [2, 1, 2, 2, 1, 3, 3, 3, 2]
+print(most_frequent(list))
+```
+
+Output
+
+```python
+[(2, 4), (3, 3)]       # 2 -> 4 times; 3 -> 3 times
+```
+
+Program
+
+```python
+from collections import Counter
+
+
+def most_frequent(lst):
+    data = Counter(lst)
+    return data.most_common(1)[0][0]      # [0][0] is the first element of a matrix
+
+list = [2, 1, 2, 2, 1, 3, 3, 3, 2]
+print(most_frequent(list))
+```
+
+Output
+
+```
+2
+```
+
 # Remove space and newlines from strings
 
 Program
@@ -493,6 +557,36 @@ import random
 
 foo = ['a', 'b', 'c', 'd', 'e']
 print(random.choice(foo))
+```
+
+# Create a single string from all the elements in a list
+
+Program
+
+```python
+a = ["Data", "Science", "Expert"]
+full_str = " ".join(a)
+print(full_str)
+```
+
+Output
+
+```bash
+Data Science Expert
+```
+
+Program
+
+```python
+a = ["Data", "Science", "Expert"]
+full_str = ", ".join(a)
+print(full_str)
+```
+
+Output
+
+```bash
+Data, Science, Expert
 ```
 
 # List vs Tuple, when to use what
