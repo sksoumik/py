@@ -1,9 +1,11 @@
-from collections import ChainMap
+import collections
 
-salary = {"SDE": 100000, "HR": 80000, "MTO": 60000}
-office_hq = {"Asia": "Singapore", "Europe": "Dublin", "North America": "USA"}
-age_limit = {"SDE": 40, "HR": 50}
+# remembers the order
+d = collections.OrderedDict()
+d["A"] = 65
+d["C"] = 67
+d["B"] = 66
+d["D"] = 68
 
-employee_info = ChainMap(salary, office_hq, age_limit)
-
-print(employee_info)
+for key, value in d.items():
+    print(key, value)
