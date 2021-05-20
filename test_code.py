@@ -1,10 +1,9 @@
-from collections import deque
+from collections import ChainMap
 
+salary = {"SDE": 100000, "HR": 80000, "MTO": 60000}
+office_hq = {"Asia": "Singapore", "Europe": "Dublin", "North America": "USA"}
+age_limit = {"SDE": 40, "HR": 50}
 
-employee_list = ["Soumik", "Jamie", "Smith"]
+employee_info = ChainMap(salary, office_hq, age_limit)
 
-employee_list_deque = deque(employee_list)
-
-# O(1) time performance
-employee_list_deque.appendleft("Sunehra")
-print(list(employee_list_deque))
+print(employee_info)
