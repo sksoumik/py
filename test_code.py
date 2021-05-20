@@ -1,11 +1,18 @@
-import collections
+class Employee:
+    def __init__(self, name, designation):
+        self.name = name
+        self.designation = designation
 
-# remembers the order
-d = collections.OrderedDict()
-d["A"] = 65
-d["C"] = 67
-d["B"] = 66
-d["D"] = 68
+    def get_name(self):
+        return self.name
 
-for key, value in d.items():
-    print(key, value)
+    def get_designation(self):
+        return self.designation
+
+    def __str__(self):
+        return f"Name: {self.name}, Position: {self.designation}"
+
+
+if __name__ == "__main__":
+    emp_1 = Employee("Jeff Bezos", "CEO")
+    print(emp_1)

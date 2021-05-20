@@ -516,7 +516,7 @@ Program
 ```python
 from collections import namedtuple
 
-# create a Employee class
+# create an Employee class
 Employee = namedtuple("Employee", ["name", "position", "level"])
 print(Employee)  # <class '__main__.Employee'>
 
@@ -642,8 +642,6 @@ C 67
 B 66
 D 68
 ```
-
-
 
 # Remove space and newlines from strings
 
@@ -862,6 +860,169 @@ MyClass.the_static_method(2)  # outputs 2
 Description
 
 We can have static method in Python using `@staticmethod` decorator. Like other static methods in other languages, we don't need to create class instance to call the static method. We can directly call the static method using the Class name. Static methods are usually used to create utility functions.
+
+# Dunder methods/Magic Functions
+
+Program
+
+```python
+class PrintString:
+    def __init__(self, str):
+        self.str = str
+
+
+if __name__ == "__main__":
+    string_1 = PrintString("Dunder Methods")
+    print(string_1)
+```
+
+Output
+
+```bash
+<__main__.PrintString object at 0x7fa4c1709190>
+# prints only the memory address of the string object
+```
+
+Program
+
+```python
+class PrintString:
+    def __init__(self, str):
+        self.str = str
+
+    def __repr__(self):
+        return f"String: {self.str}"
+
+
+if __name__ == "__main__":
+    string_1 = PrintString("Dunder Methods")
+    print(string_1)
+```
+
+Output
+
+```bash
+String: Dunder Methods
+```
+
+Program
+
+```python
+class PrintString:
+    def __init__(self, str):
+        self.str = str
+
+    def __repr__(self):
+        return f"String: {self.str}"
+
+
+if __name__ == "__main__":
+    string_1 = PrintString("Dunder Methods")
+
+    # try to add another string with it
+    string_2 = string_1 + "Magic Methods"
+    print(string_2)
+```
+
+Output
+
+```bash
+Traceback (most recent call last):
+  File "test_code.py", line 12, in <module>
+    string_2 = string_1 + "Magic Methods"
+TypeError: unsupported operand type(s) for +: 'PrintString' and 'str'
+```
+
+Program
+
+```python
+class PrintString:
+    def __init__(self, str):
+        self.str = str
+
+    def __repr__(self):
+        return f"String: {self.str}"
+
+    def __add__(self, other):
+        return self.str + " " + other
+
+
+if __name__ == "__main__":
+    string_1 = PrintString("Dunder Methods")
+    string_2 = string_1 + "Magic Methods"
+    print(string_2)
+```
+
+Output
+
+```bash
+Dunder Methods Magic Methods
+```
+
+###### str
+
+```python
+class Employee:
+    def __init__(self, name, designation):
+        self.name = name
+        self.designation = designation
+
+    def get_name(self):
+        return self.name
+
+    def get_designation(self):
+        return self.designation
+
+    def print_info(self):
+        return f"Name: {self.name}, Position: {self.position}"
+
+
+if __name__ == "__main__":
+    emp_1 = Employee("Jeff Bezos", "CEO")
+    print(emp_1)
+
+```
+
+Output
+
+```bash
+<__main__.Employee object at 0x7f82303b5390>
+# prints memory address
+```
+
+Program
+
+```python
+class Employee:
+    def __init__(self, name, designation):
+        self.name = name
+        self.designation = designation
+
+    def get_name(self):
+        return self.name
+
+    def get_designation(self):
+        return self.designation
+
+    # use only __str__ instead of print_info
+    def __str__(self):
+        return f"Name: {self.name}, Position: {self.designation}"
+
+
+if __name__ == "__main__":
+    emp_1 = Employee("Jeff Bezos", "CEO")
+    print(emp_1)
+```
+
+```bash
+Name: Jeff Bezos, Position: CEO  # prints the string
+```
+
+Note:
+
+Python has two different ways to convert an object to a string: `str()` and `repr()`
+
+Define `__repr__` for objects you write so you and other developers have a reproducible example when using it as you develop. Define `__str__` when you need a human readable string representation of it.
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
