@@ -360,6 +360,17 @@ Output
 1
 ```
 
+# minimum len/number in a list
+
+```python
+a = [1, 5, 6, 2, 3, 4]
+print(min(a))  # 1
+
+b = ["flower", "flow", "flight"]
+smallest_str = min(b, key=len)
+print(smallest_str)  # flow
+```
+
 # Iterating over dictionaries using 'for' loops
 
 Program
