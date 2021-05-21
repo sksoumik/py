@@ -1,27 +1,14 @@
-# def lcp(l):
-#     s = ""
-
-#     for c, *rest in map(set, zip(*l)):
-#         if rest:
-#             return s
-#         s += c
+def information(**data):
+    for key, value in data.items():
+        print(f"{key}: {value}")
 
 
-# l = ["flower", "flow", "flight"]
-
-# b = zip(*l)
-
-# for i in b:
-#     print(i)
-
-
-def sum_lists(*args):
-    return list(map(sum, zip(*args)))
-
-
-a = [1, 2, 3]
-b = [1, 2, 3]
-c = [2, 3, 4]
-
-result = sum_lists(a, b, c)
-print(result)
+information(Firstname="Sadman", Lastname="Soumik", Age=26, Phone=1234567890)
+information(
+    Firstname="John",
+    Lastname="Wood",
+    Email="johnwood@nomail.com",
+    Country="Wakanda",
+    Age=25,
+    Phone=9876543210,
+)
