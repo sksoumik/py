@@ -1,25 +1,27 @@
-class Vehicle:
-    # Constructor of the class
-    def __init__(self, name):
-        self.name = name
+# def lcp(l):
+#     s = ""
 
-    # Abstract method, defined by convention only
-    def brand(self):
-        raise NotImplementedError("Subclass must implement abstract method")
-
-
-class Car(Vehicle):
-    def brand(self):
-        return f"Car name: {self.name}"
+#     for c, *rest in map(set, zip(*l)):
+#         if rest:
+#             return s
+#         s += c
 
 
-class Bike(Vehicle):
-    def brand(self):
-        return f"Bike name: {self.name}"
+# l = ["flower", "flow", "flight"]
+
+# b = zip(*l)
+
+# for i in b:
+#     print(i)
 
 
-if __name__ == "__main__":
-    vehicles = [Car("BMW"), Car("Audi"), Bike("Bajaj")]
+def sum_lists(*args):
+    return list(map(sum, zip(*args)))
 
-    for vehicle in vehicles:
-        print(vehicle.brand())
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = [2, 3, 4]
+
+result = sum_lists(a, b, c)
+print(result)

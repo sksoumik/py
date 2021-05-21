@@ -226,6 +226,24 @@ Output
 ['Dart', 'Java', 'Python']
 ```
 
+# Merge two lists
+
+Program
+
+```python
+num1 = [4, 5, 6]
+num2 = [5, 6, 7]
+
+result = num1 + num2
+print(result)
+```
+
+Output
+
+```bash
+[4, 5, 6, 5, 6, 7]
+```
+
 # Using generators inside functions
 
 Program
@@ -254,6 +272,106 @@ Output
 
 ```bash
 [(31, 40, 13), (17, 51, 12)]
+```
+
+# Find the common prefix for a list of strings
+
+Program
+
+```python
+import os
+
+common = os.path.commonprefix(["flower", "flow", "flight"])
+print(common)
+```
+
+Output
+
+```bash
+fl
+```
+
+# Using map
+
+Program
+
+```python
+def fn_square(number):
+    return number ** 2
+
+
+if __name__ == "__main__":
+    lst = [1, 2, 3, 4]
+    # map(function, a iterable)
+    square = map(fn_square, lst)
+    result = list(square)
+    print(result)
+```
+
+Output
+
+```bash
+[1, 4, 9, 16]
+```
+
+###### Using Lamda
+
+Program
+
+```python
+
+iterable = [1, 2, 3, 4]
+
+square = map(lambda x: x ** 2, iterable)
+result = list(square)
+print(result)
+```
+
+Output
+
+```bash
+[1, 4, 9, 16]
+```
+
+###### Multiple list
+
+Program
+
+```python
+num1 = [4, 5, 6]
+num2 = [5, 6, 7]
+
+summation = map(sum, zip(num1, num2))
+print(list(summation))
+```
+
+Output
+
+```bash
+[9, 11, 13]
+```
+
+###### Add as many lists you want
+
+Program
+
+```python
+def sum_lists(*args):
+    return list(map(sum, zip(*args)))
+
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = [2, 3, 4]
+
+result = sum_lists(a, b, c)
+print(result)
+```
+
+Output
+
+```bash
+[4, 7, 10]
 ```
 
 # Check the memory usage
