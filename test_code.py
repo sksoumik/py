@@ -1,17 +1,11 @@
-def information(**data):
-    for key, value in data.items():
-        print(f"{key}: {value}")
+from collections import Counter
 
-    print()
+
+def find_duplicate(values):
+    duplicates = Counter(values) - Counter(set(values))
+    return list(duplicates.keys())
 
 
 if __name__ == "__main__":
-    information(Firstname="Sadman", Lastname="Soumik", Age=26, Phone=1234567890)
-    information(
-        Firstname="John",
-        Lastname="Wood",
-        Email="johnwood@nomail.com",
-        Country="Wakanda",
-        Age=25,
-        Phone=9876543210,
-    )
+    values = [1, 2, 3, 3, 3, 4, 5, 6, 6, 7]
+    print(find_duplicate(values))
