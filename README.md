@@ -491,6 +491,21 @@ Output
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+# Produce reversed list
+
+Program
+
+```python
+for i in range(10, -1, -1):
+    print(i, end=" ")
+```
+
+Output
+
+```bash
+10 9 8 7 6 5 4 3 2 1 0
+```
+
 # Slicing in array
 
 Program
@@ -701,7 +716,7 @@ Output
 [3, 6]
 ```
 
-# Collections Module
+# range(9, -1, -1)Collections Module
 
 ###### Create a class using namedtuple
 
@@ -1252,6 +1267,18 @@ Note:
 Python has two different ways to convert an object to a string: `str()` and `repr()`
 
 Define `__repr__` for objects you write so you and other developers have a reproducible example when using it as you develop. Define `__str__` when you need a human readable string representation of it.
+
+# Read JSON file
+
+```python
+import json
+
+def load_data(file):
+    intents = json.loads(open(file).read())
+    return intents
+   
+json_file = load_data('filename.json')
+```
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
