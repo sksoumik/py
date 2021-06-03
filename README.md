@@ -150,6 +150,8 @@ Program
 
 ```python
 def numbers_to_strings(argument):
+    # argument: key of a dictionary
+
     switcher = {
         0: "zero",
         1: "one",
@@ -1276,7 +1278,7 @@ import json
 def load_data(file):
     intents = json.loads(open(file).read())
     return intents
-   
+
 json_file = load_data('filename.json')
 ```
 
