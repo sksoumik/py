@@ -566,38 +566,53 @@ y 2
 z 3
 ```
 
-# Sort a dictionary by key
+# Sort a dictionary by key in ascending order
 
 Program
 
 ```python
-d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+d = {1: "a", 3: "d", 4: "c", 2: "b", 0: "e"}
 
-sort_by_key = {k: v for k, v in sorted(d.items(), key=lambda item: item[0])}
-print(sort_by_key)
+sorted_dict = sorted(d.items(), key=lambda x: x[0])  
+print(dict(sorted_dict))
 ```
 
 Output
 
 ```bash
-{0: 0, 1: 2, 2: 1, 3: 4, 4: 3}
+{0: 'e', 1: 'a', 2: 'b', 3: 'd', 4: 'c'}
 ```
 
-# Sort dictionary by value
+# Sort a dictionary by key in descending order
 
 Program
 
 ```python
-d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
-
-sort_by_value = {k: v for k, v in sorted(d.items(), key=lambda item: item[1])}
-print(sort_by_value)
+sorted_dict = sorted(d.items(), key=lambda x: x[0], reverse=True)
+print(dict(sorted_dict))
 ```
 
 Output
 
 ```bash
-{0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
+{4: 'c', 3: 'd', 2: 'b', 1: 'a', 0: 'e'}
+```
+
+Sort a diction
+
+# Sort a dictionary by value in ascending order
+
+Program
+
+```python
+sorted_dict = sorted(d.items(), key=lambda x: x[1])
+print(dict(sorted_dict))
+```
+
+Output
+
+```bash
+{1: 'a', 2: 'b', 4: 'c', 3: 'd', 0: 'e'}  # sorted by value
 ```
 
 # Rename all files of a folder
@@ -1281,6 +1296,25 @@ def load_data(file):
 
 json_file = load_data('filename.json')
 ```
+
+# List vs Tuple
+
+| List                                                         | tuple                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| A strong culture among python communities is to store **homogeneous** data ins list | Strong culture in python communities Used to store **heterogeneous** data in tuples. |
+| example: l = [1, 2, 3, 4, 5]                                 | example: t = (1, a, 3, d, X)                                 |
+| Mutable: You can always change a list after data assignment. | Immutable: You can't change it after assignment.             |
+| Common operations: append, extend, insert, remove, pop, reverse, count, copy, clear | Methods that add items or remove items are not available with tuple. [count and index] |
+
+#### Set:
+
+Set is **unordered and contains no duplicates**, which makes it very useful for math operations like unions and intersections. Whereas, List and Tuples are Ordered, and contains duplicate elements. 
+
+
+
+# Common List Operations in Python
+
+
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
