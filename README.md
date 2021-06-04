@@ -1314,7 +1314,61 @@ Set is **unordered and contains no duplicates**, which makes it very useful for 
 
 # Common List Operations in Python
 
+append | extend
 
+```python
+x = [1, 2, 3, 4]
+x.append(5)
+print(x)     # [1, 2, 3, 4, 5]
+
+y = [6, 7, 8]
+x.extend(y)  # y should be iterable, not int/str 
+print(x)     # [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+x.insert(0, 10)  # insert 10, at position 0
+print(x)     # [10, 1, 2, 3, 4, 5, 6, 7, 8]
+
+x.insert(len(x), 20)    # insert 20 at the end of the list
+print(x)                # [10, 1, 2, 3, 4, 5, 6, 7, 8, 20]
+```
+
+reverse
+
+```python
+
+x = [1, 2, 3, 4]
+
+print(x[::-1])  # [4, 3, 2, 1] ; doesn't chnage the original list
+print(x)        # [1, 2, 3, 4] 
+
+x.reverse()
+print(x)        # [4, 3, 2, 1] ; change the original list inplace
+
+```
+
+count
+
+```python
+x = [1, 2, 3, 4, 1, 1]
+
+print(x.count(1))   # 3
+```
+
+clear
+
+```python
+x = [1, 2, 3, 4, 1, 1]
+x.clear()
+print(x)   # []
+```
+
+index
+
+```python
+x = ["a", "b", "c", "d", "e", "f"]
+print(x.index("d")) # 3
+```
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
