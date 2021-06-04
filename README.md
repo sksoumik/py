@@ -951,25 +951,18 @@ Output
 Data, Science, Expert
 ```
 
-# List vs Tuple, when to use what
+# List vs Tuple
 
-Tuples are fixed size in nature whereas lists are dynamic.
-In other words, a tuple is immutable whereas a list is mutable.
+| List                                                         | tuple                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| A strong culture among python communities is to store **homogeneous** data ins list | Strong culture in python communities Used to store **heterogeneous** data in tuples. |
+| example: l = [1, 2, 3, 4, 5]                                 | example: t = (1, a, 3, d, X)                                 |
+| Mutable: You can always change a list after data assignment. | Immutable: You can't change it after assignment.             |
+| Common operations: append, extend, insert, remove, pop, reverse, count, copy, clear | Methods that add items or remove items are not available with tuple. [count and index] |
 
-1. You can't add elements to a tuple. Tuples have no append or extend method.
-2. You can't remove elements from a tuple. Tuples have no remove or pop method.
+#### Set:
 
-Tuples are heterogeneous data structures (i.e., their entries have different meanings), while lists are homogeneous sequences. Tuples have structure, lists have order.
-
-Using this distinction makes code more explicit and understandable.
-
-One example would be pairs of page and line number to reference locations in a book, e.g.:
-
-```bash
-my_location = (42, 11)  # page number, line number
-```
-
-You can then use this as a key in a dictionary to store notes on locations. A list on the other hand could be used to store multiple locations.
+Set is **unordered and contains no duplicates**, which makes it very useful for math operations like unions and intersections. Whereas, List and Tuples are Ordered, and contains duplicate elements. 
 
 # yield keyword
 
@@ -1296,21 +1289,6 @@ def load_data(file):
 
 json_file = load_data('filename.json')
 ```
-
-# List vs Tuple
-
-| List                                                         | tuple                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| A strong culture among python communities is to store **homogeneous** data ins list | Strong culture in python communities Used to store **heterogeneous** data in tuples. |
-| example: l = [1, 2, 3, 4, 5]                                 | example: t = (1, a, 3, d, X)                                 |
-| Mutable: You can always change a list after data assignment. | Immutable: You can't change it after assignment.             |
-| Common operations: append, extend, insert, remove, pop, reverse, count, copy, clear | Methods that add items or remove items are not available with tuple. [count and index] |
-
-#### Set:
-
-Set is **unordered and contains no duplicates**, which makes it very useful for math operations like unions and intersections. Whereas, List and Tuples are Ordered, and contains duplicate elements. 
-
-
 
 # Common List Operations in Python
 
