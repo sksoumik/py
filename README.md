@@ -1348,5 +1348,18 @@ x = ["a", "b", "c", "d", "e", "f"]
 print(x.index("d")) # 3
 ```
 
+# Split a list into x amounts
+
+```python
+x = [1,2,3,4,5,6,7,1,2,3,3,3,3,3,3,3,3,3]
+# split the above list into 8 parts
+split_x = [x[i::8] for i in range(8)]
+print(split_x)
+```
+output:
+```bash
+[[1, 2, 3], [2, 3, 3], [3, 3], [4, 3], [5, 3], [6, 3], [7, 3], [1, 3]]
+```
+
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
