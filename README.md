@@ -1360,6 +1360,15 @@ output:
 ```bash
 [[1, 2, 3], [2, 3, 3], [3, 3], [4, 3], [5, 3], [6, 3], [7, 3], [1, 3]]
 ```
+flatten the split_x:
+```python
+flat_x = [item for sublist in split_x for item in sublist]
+print(flat_x)
+```
+output:
+```bash
+[1, 2, 3, 2, 3, 3, 3, 3, 4, 3, 5, 3, 6, 3, 7, 3, 1, 3]
+```
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
