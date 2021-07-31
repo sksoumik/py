@@ -32,7 +32,7 @@ Output
 {'name' : 'Soumik', 'age' : 26, 'location' : 'Bangladesh'}
 ```
 
-# Create nested directory using pathlib
+# Create nested directory
 
 Program
 
@@ -40,6 +40,14 @@ Program
 from pathlib import Path
 
 Path("father/child").mkdir(parents=True, exist_ok=True)
+```
+We can also the `os` module.
+```python
+import os
+
+TARGET_DIR = "parent_dir/child_dir"
+if not os.path.exists(TARGET_DIR):
+    os.makedirs(TARGET_DIR)
 ```
 
 # Slice Strings
