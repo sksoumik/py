@@ -254,6 +254,37 @@ Output
 [4, 5, 6, 5, 6, 7]
 ```
 
+# Generators in Python
+The main advantage of generator over a list is that it takes much less memory.
+The syntax for generators and list comprehensions:
+
+```python
+ L = [1, 2,3,4]
+>>> [x**x for x in L]
+[1, 4, 27, 256]
+>>> (x**x for x in L)
+<generator object <genexpr> at 0x7fa9fb5aac10>
+```
+
+**When to use what?**
+
+You should use a list if you want to use any of the list methods. For example, the following code won't work:
+
+```python
+def gen():
+    return (something for something in get_some_stuff())
+
+print gen()[:2]     # generators don't support indexing or slicing
+print [5,6] + gen() # generators can't be added to lists
+```
+
+Basically, use a generator expression if all you're doing is *iterating once.* 
+
+If you want to store and use the generated results, then you're probably better off with a list comprehension.
+
+
+
+
 # Using generators inside functions
 
 Program
