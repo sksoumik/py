@@ -1487,29 +1487,23 @@ selected_sample = random.sample(sample_list, 10)
 print(selected_sample)
 ```
 
+# Sort a dictionary by its value in ascending order
+
+```python
+def sort_dict_by_value(d):
+    return sorted(d.items(), key=lambda x: x[1], reverse=False)
 
 
+if __name__ == "__main__":
+    d = {"a": 1, "b": 2, "c": 3}
+    print(sort_dict_by_value(d))
+```
 
+output
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```shell
+[('a', 1), ('b', 2), ('c', 3)]
+```
 
 
 
