@@ -1389,6 +1389,8 @@ print(x.index("d")) # 3
 
 # Split a list into x amounts
 
+
+
 ```python
 x = [1,2,3,4,5,6,7,1,2,3,3,3,3,3,3,3,3,3]
 # split the above list into 8 parts
@@ -1408,6 +1410,93 @@ output:
 ```bash
 [1, 2, 3, 2, 3, 3, 3, 3, 4, 3, 5, 3, 6, 3, 7, 3, 1, 3]
 ```
+
+# Save all items of a list in a line separated text file
+
+```python
+lst = ['Sample text 1', 'sample text 2', 'sample text 3', 'sample text 4']
+
+SAVE_PATH = './my_list.txt'
+
+with open(SAVE_PATH, mode='wt', encoding='utf-8') as myfile:
+    myfile.write('\n'.join(lst))
+```
+
+# Take multiple user inputs
+
+###### Take two int inputs
+
+```python
+a, b = map(int, input().split())
+print(f"a = {a}; b = {b}")
+```
+
+output:
+
+```shell
+10 20               # user input
+a = 10; b = 20
+```
+
+###### Input a list of integers
+
+```python
+l = list(map(int, input().split()))
+print(l)	
+```
+
+output:
+
+```shell
+10 20 30 40           # user input
+[10, 20, 30, 40]  
+```
+
+###### Input a list of strings
+
+```python
+l = list(map(str, input().split()))
+print(l)
+```
+
+output:
+
+```shell
+apple google facebook    # user input
+['apple', 'google', 'facebook']
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ================================================
 AUTHOR: [SADMAN KABIR SOUMIK](https://www.linkedin.com/in/sksoumik/)
