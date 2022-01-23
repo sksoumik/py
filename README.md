@@ -1466,9 +1466,26 @@ apple google facebook    # user input
 ['apple', 'google', 'facebook']
 ```
 
+# Randomly select few samples from a list
 
+###### Create some random numbers
 
+```python
+import random
 
+sample_list = []
+
+for _ in range(100):
+	# create 100 integers in the range of [10, 1000]
+    sample_list.append(random.randint(10, 1000))  
+```
+
+###### Randomly select 10 items from the sample_list
+
+```python
+selected_sample = random.sample(sample_list, 10)
+print(selected_sample)
+```
 
 
 
