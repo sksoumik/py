@@ -1505,7 +1505,21 @@ output
 [('a', 1), ('b', 2), ('c', 3)]
 ```
 
+## Print colored text in the terminal
 
+```python
+# pip install termcolor
+
+from termcolor import colored, cprint
+
+text = colored('Hello, World!', 'red')
+print(text)
+cprint('Hello, World!', 'red', 'on_yellow')
+```
+
+output
+
+![](/home/soumik/code/py/static/color_print.png)
 
 
 
