@@ -1519,7 +1519,7 @@ cprint('Hello, World!', 'red', 'on_yellow')
 
 output
 
-![](/home/soumik/code/py/static/color_print.png)
+![](static/color_print.png)
 
 
 
