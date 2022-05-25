@@ -254,7 +254,41 @@ Output
 [4, 5, 6, 5, 6, 7]
 ```
 
+# Find the common items among multiple lists
+
+2D lists: 
+
+```python
+edges = [
+	[1,2],
+	[2,3],
+	[4,2]
+]
+
+common_eleme = set.intersection(*map(set, edges))
+
+for item in common_eleme:
+    print(item)   # 2
+```
+
+1D lists
+
+```python
+ar1 = [1, 5, 10, 20, 40, 80]
+ar2 = [6, 7, 20, 80, 100]
+ar3 = [3, 4, 15, 20, 30, 70, 80, 120]
+
+# find the common elements in the three arrays
+common_eleme = set.intersection(*map(set, [ar1, ar2, ar3]))
+
+for item in common_eleme:
+    print(item)  # 80 20
+```
+
+
+
 # Generators in Python
+
 The main advantage of generator over a list is that it takes much less memory.
 The syntax for generators and list comprehensions:
 
@@ -1520,6 +1554,17 @@ cprint('Hello, World!', 'red', 'on_yellow')
 output
 
 ![](static/color_print.png)
+
+
+
+# Common String Operation
+
+```
+s = "abba"
+
+```
+
+
 
 
 
