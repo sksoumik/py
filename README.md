@@ -1566,6 +1566,37 @@ s = "abba"
 
 
 
+# Comprehension List
+
+# What is in python a generator
+
+# What is a decorator?
+
+# why lists have '.append' and sets have '.add' 
+
+`.append` means to add to the end, which is accurate and makes sense for *lists*, but *sets* have no notion of ordering and hence no beginning or end, so `.add` makes more sense for them. 
+
+# remove duplicates from a list preserving original order? 
+
+```python
+>>> items = [1, 2, 0, 1, 3, 2]
+>>> list(dict.fromkeys(items))  
+[1, 2, 0, 3]
+```
+
+
+
+# Disable all warnings
+
+```python
+!pip install shutup
+
+import shutup
+shutup.please()
+```
+
+
+
 
 
 ================================================
